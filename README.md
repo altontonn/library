@@ -16,10 +16,9 @@
 ## ⚒️ Built With
 
 - HTML & JAVASCRIPT
-- Add media query to style my desktop version
 
 ## Live Demo
-- []
+
 
 ## 🧰 Tools
 
