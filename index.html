@@ -10,18 +10,7 @@
   </head>
   <body>
     <div class="firstContainer">
-      <h1> AWESOME BOOKS </h1>
-      <form id ="book-input">
-        <div class="book-group">
-          <label for="title"> Title </label>
-          <input type="text" id="title" class="book-content">
-        </div><br>
-        <div class="book-group">
-          <label for="author"> Author </label>
-          <input type="text" id="author" class="book-content">
-        </div><br>
-        <input type="submit" value="Add" class="btn-submit">
-      </form>
+      <h1> All Awesome Books</h1>
       <table class="table table-container">
         <thead>
           <tr>
@@ -32,6 +21,23 @@
         </thead>
         <tbody id="list-book"></tbody>
       </table>
+      <div class="div-line">
+        <hr class="line">
+      </div>
+      <h2> Add A New Book </h2>
+      <form id ="book-input">
+        <div class="book-group">
+          <label for="title">
+          <input type="text" id="title" class="book-content" placeholder="title">
+          </label>
+        </div><br>
+        <div class="book-group">
+          <label for="author">
+          <input type="text" id="author" class="book-content" placeholder="author">
+          </label>
+        </div><br>
+        <input type="submit" value="Add" class="btn-submit">
+      </form>
     </div>
 
     <script src="main.js"></script>
