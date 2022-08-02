@@ -17,13 +17,14 @@ table {
   width: 50%;
 }
 
-th, td {
+th,
+td {
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .div-line {
@@ -50,41 +51,45 @@ input[type=submit] {
 div {
   margin-bottom: 10px;
 }
+
 input[type=text] {
   padding: 5px;
-  border: 2px solid #cccccc;
+  border: 2px solid #ccc;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
+
 input[type=text]:focus {
   border-color: #333;
 }
 
-a{
-  text-decoration:none;
-  color:#989393;
- }
+a {
+  text-decoration: none;
+  color: #989393;
+}
 
- a.btn{
-  background-color:#fff;
-  border:1px solid #868181;
-  border-radius:5px;
-  color:#000;
-  margin-right:10px;
-  padding:0 10px 0 10px; 
- }
+a.btn {
+  background-color: #fff;
+  border: 1px solid #868181;
+  border-radius: 5px;
+  color: #000;
+  margin-right: 10px;
+  padding: 0 10px 0 10px;
+}
 
- a.btn:active,a.btn:focus,a.btn:hover{
-  background-color:#1291ad;
-  margin-top:-5px;
+a.btn:active,
+a.btn:focus,
+a.btn:hover {
+  background-color: #1291ad;
+  margin-top: -5px;
   color: #fff;
- }
- 
- a.btn:hover{
-  border:1px solid #000000;
- }
+}
 
- /* .hr1 {
+a.btn:hover {
+  border: 1px solid #000;
+}
+
+/* .hr1 {
   border: 0;
   height: 2px;
   background-image: linear-gradient(to right, transparent, #CCC, transparent);
