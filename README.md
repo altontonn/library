@@ -41,8 +41,17 @@ git https://github.com/altontonn/portfolio.git
 ## 🙎🏾‍♂️ Author
 
 - GitHub: [Newton Alumasa](https://github.com/altontonn)
-- Twitter: [Newton Alumasa](https://twitter.com/AlumasaNewton)
-- LinkedIn: [Newton Alumasa](https://linkedin.com/in/NewtonAlumasa)
+- GitHub: [Peter Njuguna](https://github.com/peterboro)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/altontonn/library/issues).
+
+## Acknowledgements
+
+- Microverse
 
 ## 👊🏾 Show your support
 
