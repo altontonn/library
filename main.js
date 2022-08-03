@@ -61,8 +61,8 @@ class task {
     div.className = `alert alert-${className}`;
     div.appendChild(document.createTextNode(message));
     const container = document.querySelector('.firstContainer');
-    const form = document.querySelector('#book-input');
-    container.insertBefore(div, form);
+    const navigation = document.querySelector('.navigation');
+    container.insertBefore(div, navigation);
     setTimeout(() => document.querySelector('.alert').remove(), 3000);
   }
 
@@ -70,6 +70,19 @@ class task {
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
   }
+}
+
+const listBook = document.getElementById('listBooks');
+const newBook = document.getElementById('newBooks');
+const contact = document.getElementById('contact');
+const navItems = [listBook, newBook, contact];
+const listSection = document.getElementById('list-section');
+const addSection = document.getElementById('add-section');
+const contactSection = document.getElementById('contact-section');
+const sections = [listSection, addSection, contactSection];
+
+function saveActiveNavItemLocally(id) {
+  localStorage.setItem('activeNavItem', id);
 }
 
 document.addEventListener('DOMContentLoaded', task.currentBooks);
@@ -83,7 +96,7 @@ document.querySelector('#book-input').addEventListener('submit', (e) => {
     const book = new Books(title, author);
     task.addBookList(book);
     Store.addBook(book);
-    task.showAlert('book added');
+    task.showAlert('Book added', 'success');
     task.clearField();
   }
 });
@@ -92,4 +105,40 @@ document.querySelector('#list-book').addEventListener('click', (e) => {
   task.deleteBook(e.target);
   Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
   task.showAlert('Book Removed');
+});
+
+function displaySection(id) {
+  sections.forEach((section) => {
+    if (section.id === id) {
+      section.classList.remove('d-none');
+    } else {
+      section.classList.add('d-none');
+    }
+  });
+}
+
+function activateNavItem(id) {
+  navItems.forEach((navItem) => {
+    if (navItem.id === id) {
+      navItem.classList.add('li-active');
+    } else {
+      navItem.classList.remove('li-active');
+    }
+  });
+}
+
+listBook.addEventListener('click', () => {
+  displaySection(listSection.id);
+  activateNavItem(listBook.id);
+  saveActiveNavItemLocally(listBook.id);
+});
+newBook.addEventListener('click', () => {
+  displaySection(addSection.id);
+  activateNavItem(newBook.id);
+  saveActiveNavItemLocally(newBook.id);
+});
+contact.addEventListener('click', () => {
+  displaySection(contactSection.id);
+  activateNavItem(contact.id);
+  saveActiveNavItemLocally(contact.id);
 });

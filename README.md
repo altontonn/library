@@ -38,11 +38,20 @@ git https://github.com/altontonn/portfolio.git
 - Once the files are downloaded or cloned on your machine, open the "Portfolio" folder in [Visual Studio Code(VSCode)](https://code.visualstudio.com/)
 - Optionally you can simply open the index.html file located in the "personal-portfolio" folder with your preferred browser
 
-## 🙎🏾‍♂️ Author
+## 🙎🏾‍♂️ Authors
 
 - GitHub: [Newton Alumasa](https://github.com/altontonn)
-- Twitter: [Newton Alumasa](https://twitter.com/AlumasaNewton)
-- LinkedIn: [Newton Alumasa](https://linkedin.com/in/NewtonAlumasa)
+- GitHub: [Peter Njuguna](https://github.com/peterboro)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/altontonn/library/issues).
+
+## Acknowledgements
+
+- Microverse
 
 ## 👊🏾 Show your support
 
