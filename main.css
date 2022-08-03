@@ -4,6 +4,15 @@
   border: 0;
 }
 
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: monospace;
+}
+
+
+
 /* .firstContainer {
   display: flex;
   flex-direction: column;
@@ -23,6 +32,10 @@
   display: none;
 }
 
+.d-none:active {
+  display: block;
+}
+
 table {
   border: 3px solid;
   width: 50%;
@@ -38,7 +51,7 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-.div-line {
+/* .div-line {
   margin-top: 2rem;
   width: 25%;
 }
@@ -46,8 +59,8 @@ tr:nth-child(even) {
 .line {
   border: 0;
   height: 2px;
-  background-image: linear-gradient(to right, transparent, #000, transparent);
-}
+  background-image: linear-gradient(to right, transparent, #000, transparent); */
+/*  */
 
 input[type=submit] {
   padding: 5px 15px;
@@ -103,9 +116,13 @@ a.btn:hover {
 .navigation {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  /* width: 50%; */
   border: 2px solid;
-  padding: 0 20px;
+  /* padding: 0 20px; */
+  width: 1200px;
+  max-width: calc(100% - 20px);
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .navigation ul li{
@@ -125,4 +142,14 @@ a.btn:hover {
 .navigation ul li a:hover {
   color: #4a60f1;
   cursor: pointer;
+}
+
+.lastContainer {
+  display: flex;
+  justify-content: center;
+  border: 2px solid;
+  width: 1200px;
+  max-width: calc(100% - 20px);
+  margin: 0 auto;
+  padding: 0 10px;
 }

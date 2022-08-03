@@ -62,8 +62,8 @@ class task {
     div.appendChild(document.createTextNode(message));
     const container = document.querySelector('.firstContainer');
     const form = document.querySelector('#book-input');
-    container.insertBefore(div, form);
-    setTimeout(() => document.querySelector('.alert').remove(), 3000);
+    // container.insertBefore(div, form);
+    // setTimeout(() => document.querySelector('.alert').remove(), 3000);
   }
 
   static clearField() {
@@ -74,11 +74,13 @@ class task {
 
 const listBook = document.getElementById('listBooks');
 const newBook = document.getElementById('newBooks');
-//const contact = document.querySelector('.contact');
-const navItems = [listBook, newBook];
+const contact = document.getElementById('contact');
+const navItems = [listBook, newBook, contact];
 const listSection = document.getElementById('list-section');
 const addSection = document.getElementById('add-section');
-const sections = [listSection, addSection];
+const contactSection = document.getElementById('contact-section');
+const sections = [listSection, addSection, contactSection];
+
 
 function saveActiveNavItemLocally(id) {
   localStorage.setItem('activeNavItem', id);
@@ -135,24 +137,27 @@ function getSectionId(navItemId) {
     case 'newBooks':
       sectionId = 'add-section';
       break;
+    case 'contact':
+      sectionId = 'contact-section';
+      break;
     default:
       sectionId = '';
   }
   return sectionId;
 }
 
-window.addEventListener('load', () => {
-  const navItemId = localStorage.getItem('activeNavItem');
-  const sectionId = getSectionId(navItemId);
-  displaySection(sectionId);
-  activateNavItem(navItemId);
-  task.books = JSON.parse(localStorage.getItem('books'));
-  if (task.books) {
-    appendAllBooks();
-  } else {
-    task.books = [];
-  }
-});
+// window.addEventListener('load', () => {
+//   const navItemId = localStorage.getItem('activeNavItem');
+//   const sectionId = getSectionId(navItemId);
+//   displaySection(sectionId);
+//   activateNavItem(navItemId);
+//   task.books = JSON.parse(localStorage.getItem('books'));
+//   if (task.books) {
+//     appendAllBooks();
+//   } else {
+//     task.books = [];
+//   }
+// });
 
 listBook.addEventListener('click', () => {
   displaySection(listSection.id);
@@ -164,3 +169,10 @@ newBook.addEventListener('click', () => {
   activateNavItem(newBook.id);
   saveActiveNavItemLocally(newBook.id);
 });
+contact.addEventListener('click', () => {
+  displaySection(contactSection.id);
+  activateNavItem(contact.id);
+  saveActiveNavItemLocally(contact.id);
+});
+
+
