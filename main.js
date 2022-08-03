@@ -61,9 +61,9 @@ class task {
     div.className = `alert alert-${className}`;
     div.appendChild(document.createTextNode(message));
     const container = document.querySelector('.firstContainer');
-    const form = document.querySelector('#book-input');
-    // container.insertBefore(div, form);
-    // setTimeout(() => document.querySelector('.alert').remove(), 3000);
+    const navigation = document.querySelector('.navigation');
+    container.insertBefore(div, navigation);
+    setTimeout(() => document.querySelector('.alert').remove(), 3000);
   }
 
   static clearField() {
@@ -81,7 +81,6 @@ const addSection = document.getElementById('add-section');
 const contactSection = document.getElementById('contact-section');
 const sections = [listSection, addSection, contactSection];
 
-
 function saveActiveNavItemLocally(id) {
   localStorage.setItem('activeNavItem', id);
 }
@@ -97,7 +96,7 @@ document.querySelector('#book-input').addEventListener('submit', (e) => {
     const book = new Books(title, author);
     task.addBookList(book);
     Store.addBook(book);
-    task.showAlert('book added');
+    task.showAlert('Book added', 'success');
     task.clearField();
   }
 });
@@ -128,37 +127,6 @@ function activateNavItem(id) {
   });
 }
 
-function getSectionId(navItemId) {
-  let sectionId;
-  switch (navItemId) {
-    case 'listBooks':
-      sectionId = 'list-section';
-      break;
-    case 'newBooks':
-      sectionId = 'add-section';
-      break;
-    case 'contact':
-      sectionId = 'contact-section';
-      break;
-    default:
-      sectionId = '';
-  }
-  return sectionId;
-}
-
-// window.addEventListener('load', () => {
-//   const navItemId = localStorage.getItem('activeNavItem');
-//   const sectionId = getSectionId(navItemId);
-//   displaySection(sectionId);
-//   activateNavItem(navItemId);
-//   task.books = JSON.parse(localStorage.getItem('books'));
-//   if (task.books) {
-//     appendAllBooks();
-//   } else {
-//     task.books = [];
-//   }
-// });
-
 listBook.addEventListener('click', () => {
   displaySection(listSection.id);
   activateNavItem(listBook.id);
@@ -174,5 +142,3 @@ contact.addEventListener('click', () => {
   activateNavItem(contact.id);
   saveActiveNavItemLocally(contact.id);
 });
-
-
