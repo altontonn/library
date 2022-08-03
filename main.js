@@ -72,6 +72,18 @@ class task {
   }
 }
 
+const listBook = document.getElementById('listBooks');
+const newBook = document.getElementById('newBooks');
+//const contact = document.querySelector('.contact');
+const navItems = [listBook, newBook];
+const listSection = document.getElementById('list-section');
+const addSection = document.getElementById('add-section');
+const sections = [listSection, addSection];
+
+function saveActiveNavItemLocally(id) {
+  localStorage.setItem('activeNavItem', id);
+}
+
 document.addEventListener('DOMContentLoaded', task.currentBooks);
 document.querySelector('#book-input').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -92,4 +104,63 @@ document.querySelector('#list-book').addEventListener('click', (e) => {
   task.deleteBook(e.target);
   Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
   task.showAlert('Book Removed');
+});
+
+function displaySection(id) {
+  sections.forEach((section) => {
+    if (section.id === id) {
+      section.classList.remove('d-none');
+    } else {
+      section.classList.add('d-none');
+    }
+  });
+}
+
+function activateNavItem(id) {
+  navItems.forEach((navItem) => {
+    if (navItem.id === id) {
+      navItem.classList.add('li-active');
+    } else {
+      navItem.classList.remove('li-active');
+    }
+  });
+}
+
+function getSectionId(navItemId) {
+  let sectionId;
+  switch (navItemId) {
+    case 'listBooks':
+      sectionId = 'list-section';
+      break;
+    case 'newBooks':
+      sectionId = 'add-section';
+      break;
+    default:
+      sectionId = '';
+  }
+  return sectionId;
+}
+
+window.addEventListener('load', () => {
+  const navItemId = localStorage.getItem('activeNavItem');
+  const sectionId = getSectionId(navItemId);
+  displaySection(sectionId);
+  activateNavItem(navItemId);
+  task.books = JSON.parse(localStorage.getItem('books'));
+  if (task.books) {
+    appendAllBooks();
+  } else {
+    task.books = [];
+  }
+});
+
+listBook.addEventListener('click', () => {
+  displaySection(listSection.id);
+  activateNavItem(listBook.id);
+  saveActiveNavItemLocally(listBook.id);
+});
+newBook.addEventListener('click', () => {
+  displaySection(addSection.id);
+  activateNavItem(newBook.id);
+  saveActiveNavItemLocally(newBook.id);
 });

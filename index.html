@@ -5,39 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="main.css">
-
     <title> AWESOME BOOKS </title>
   </head>
   <body>
     <div class="firstContainer">
+      <nav class="navigation">
+        <p>Awesome Books</p>
+        <ul>
+          <li><a href="#" id="listBooks" class="li-active">List</a></li>
+          <li><a href="#" id="newBooks">Add New</a></li>
+          <li><a href="#" id="contact">Contact</a></li>
+        </ul>
+      </nav>
+
       <h1> All Awesome Books</h1>
-      <table class="table table-container">
-        <thead>
-          <tr>
-            <th> Title </th>
-            <th> Author </th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody id="list-book"></tbody>
-      </table>
+      <section id="list-section">
+        <table class="table table-container">
+          <thead>
+            <tr>
+              <th> Title </th>
+              <th> Author </th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="list-book"></tbody>
+        </table>
+      </section>
+
       <div class="div-line">
         <hr class="line">
       </div>
-      <h2> Add A New Book </h2>
-      <form id ="book-input">
-        <div class="book-group">
-          <label for="title">
-          <input type="text" id="title" class="book-content" placeholder="title">
-          </label>
-        </div><br>
-        <div class="book-group">
-          <label for="author">
-          <input type="text" id="author" class="book-content" placeholder="author">
-          </label>
-        </div><br>
-        <input type="submit" value="Add" class="btn-submit">
-      </form>
+
+      <section id="add-section" class="d-none">
+        <h2> Add A New Book </h2>
+        <form id ="book-input">
+          <div class="book-group">
+            <label for="title">
+            <input type="text" id="title" class="book-content" placeholder="title">
+            </label>
+          </div><br>
+          <div class="book-group">
+            <label for="author">
+            <input type="text" id="author" class="book-content" placeholder="author">
+            </label>
+          </div><br>
+          <input type="submit" value="Add" class="btn-submit">
+        </form>
+      </section>
+
     </div>
 
     <script src="main.js"></script>
