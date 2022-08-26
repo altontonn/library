@@ -8,16 +8,17 @@
 - This is a project that add, stores and deletes current book in the library. 
 
 ## Linter for html&css (Stylelint)
--https://github.com/microverseinc/linters-config/tree/master/html-css
+-[stylelint](https://github.com/microverseinc/linters-config/tree/master/html-css)
 
 ## linter for html&css + javascript (ESlint)
--https://github.com/microverseinc/linters-config/tree/master/html-css-js
+-[Eslint](https://github.com/microverseinc/linters-config/tree/master/html-css-js)
 
 ## ⚒️ Built With
 
 - HTML & JAVASCRIPT
 
 ## Live Demo
+[See Live](https://altontonn.github.io/library/)
 
 
 ## 🧰 Tools
