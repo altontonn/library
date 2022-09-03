@@ -1,6 +1,7 @@
 
 
 # Awesome Books
+<img src="img/library-img.png">
 
 > My personal Library
 
@@ -19,7 +20,6 @@
 
 ## Live Demo
 [See Live](https://altontonn.github.io/library/)
-
 
 ## 🧰 Tools
 
