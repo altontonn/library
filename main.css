@@ -28,6 +28,12 @@ table {
   width: 50vw;
 }
 
+@media screen and (max-width: 600px) {
+  .table {
+    width: 90vw;
+  }
+}
+
 th,
 td {
   text-align: left;
@@ -102,6 +108,12 @@ a.btn:hover {
   padding: 0 10px;
 }
 
+@media screen and (max-width: 600px) {
+  .navigation {
+    width: 90vw;
+  }
+}
+
 .navigation ul li {
   list-style: none;
   display: inline-block;
@@ -135,6 +147,12 @@ a.btn:hover {
   justify-content: center;
   border: 2px solid;
   width: 50vw;
-  padding: 0 10px;
+  padding: 10px 10px;
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .lastContainer {
+    width: 90vw;
+  }
 }

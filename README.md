@@ -32,7 +32,7 @@ If you installed git you can clone the code to your machine, or download a ZIP o
 [Download the ZIP from this location](https://github.com/altontonn/library/archive/refs/heads/main.zip), or run the following [git](https://git-scm.com/downloads) command to clone the files to your machine:
 
 ```bash
-git https://github.com/altontonn/portfolio.git
+git https://github.com/altontonn/library.git
 ```
 
 - Once the files are downloaded or cloned on your machine, open the "Portfolio" folder in [Visual Studio Code(VSCode)](https://code.visualstudio.com/)

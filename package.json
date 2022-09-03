@@ -328,6 +328,7 @@
     "longest-streak": "^2.0.4",
     "lowercase-keys": "^2.0.0",
     "lru-cache": "^6.0.0",
+    "luxon": "^3.0.1",
     "make-dir": "^3.1.0",
     "make-fetch-happen": "^10.2.0",
     "map-age-cleaner": "^0.1.3",
