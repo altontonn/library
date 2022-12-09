@@ -5,7 +5,11 @@
 }
 
 body {
-  background-color: #b0c7f3;
+  background-image: linear-gradient(hsla(8,9%,57%,.4),hsla(8,9%,57%,.4)), url(./img/books.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
 }
 
 .firstContainer {
@@ -13,7 +17,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: monospace;
-  background: #9ab9f1; 
+  background: linear-gradient(hsla(87,9%,57%,.4),hsla(87,9%,57%,.3));
   padding: 2rem;
   margin: auto;
   width: fit-content;
@@ -49,7 +53,7 @@ td {
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: lightskyblue;
 }
 
 input[type=submit] {
@@ -128,7 +132,7 @@ a.btn:hover {
 }
 
 .navigation ul li a {
-  color: #000;
+  color: #fff;
 }
 
 .navigation ul li:not(:last-child) {
