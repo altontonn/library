@@ -1,7 +1,7 @@
 
 
 # Awesome Books
-<img src="img/FireShot Capture 004.png">
+<img src="img/booksMock.png">
 
 > My personal Library
 
